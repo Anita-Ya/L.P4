@@ -1,6 +1,6 @@
 // Smooth Intersection Observer for Scroll Animations
 document.addEventListener('DOMContentLoaded', () => {
-  const animatedItems = document.querySelectorAll('.support-trail-row, .split-product-hero-wrap, .product-info-card, .feature-node-item, .ingredient-ribbon-card');
+  const animatedItems = document.querySelectorAll('.support-trail-row, .split-product-hero-wrap, .product-info-card, .feature-node-item, .ingredient-ribbon-card, .hex-item-wrap');
 
   if ('IntersectionObserver' in window) {
     const observerOptions = {

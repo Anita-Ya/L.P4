@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hex Test</title>
+<style>
+  body {
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
+    font-family: sans-serif;
+  }
+  .test-container {
+    width: 420px;
+    background: #ffffff;
+    padding: 30px 15px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  .hex-wrap {
+    position: relative;
+    width: 190px;
+    height: 220px;
+  }
+</style>
+</head>
+<body>
+<div class="test-container">
+  <h2>Rounded Hexagon Test</h2>
+  <svg width="200" height="230" viewBox="0 0 200 230">
+    <defs>
+      <filter id="hexDrop" x="-20%" y="-15%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0b3c5d" flood-opacity="0.16" />
+      </feDropShadow>
+      <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="100%" stop-color="#f8fcfe" />
+      </linearGradient>
+    </defs>
+    <!-- Backplate (Teal) shifted right -->
+    <path d="M 100,12 
+             L 182,59 A 16,16 0 0,1 190,73
+             L 190,157 A 16,16 0 0,1 182,171
+             L 100,218 A 16,16 0 0,1 90,218
+             L 18,171 A 16,16 0 0,1 10,157
+             L 10,73 A 16,16 0 0,1 18,59
+             L 90,12 A 16,16 0 0,1 100,12 Z"
+          fill="#33c3a5"
+          transform="translate(14, 6)" />
+          
+    <!-- Main White Card with Shadow -->
+    <path d="M 95,12 
+             L 177,59 A 16,16 0 0,1 185,73
+             L 185,157 A 16,16 0 0,1 177,171
+             L 95,218 A 16,16 0 0,1 85,218
+             L 13,171 A 16,16 0 0,1 5,157
+             L 5,73 A 16,16 0 0,1 13,59
+             L 85,12 A 16,16 0 0,1 95,12 Z"
+          fill="url(#cardGrad)"
+          stroke="#e2edf3"
+          stroke-width="1.5"
+          filter="url(#hexDrop)" />
+  </svg>
+</div>
+</body>
+</html>
+
