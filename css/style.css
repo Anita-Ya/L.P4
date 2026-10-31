@@ -1,0 +1,1233 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
+
+:root {
+  --bg-page: #F2F8FB;
+  --navy-primary: #0B3C5D;
+  --navy-dark: #062338;
+  --navy-deep: #041726;
+  --mint-accent: #33C3A5;
+  --mint-light: #6ee7b7;
+  --mint-glow: rgba(51, 195, 165, 0.45);
+  --text-white: #ffffff;
+  --text-soft: #d5e7f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Mukta', sans-serif;
+  background-color: var(--bg-page);
+  color: var(--navy-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+/* =========================================================
+   MOBILE-FIRST CONTAINER: MAX-WIDTH 450px (SEAMLESS FULL-FLUSH)
+   ========================================================= */
+.mobile-wrapper {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 0 35px rgba(11, 60, 93, 0.1);
+  position: relative;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* =========================================================
+   1. HERO / HOOK SECTION (OFFICIAL GRAPHIC BANNER - SEAMLESS CONNECTED)
+   ========================================================= */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  display: block;
+  overflow: hidden;
+  background: #F2F8FB;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.hero-main-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================================================
+   2. PROBLEM / PAIN DETAILING SECTION (LIGHT LUXURY THEME - SEAMLESS CONNECTED)
+   ========================================================= */
+.problem-detailing-section.light-theme {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #F2F8FB 0%, #FFFFFF 40%, #F5FAFA 100%);
+  border-radius: 0;
+  margin-top: 0;
+  padding: 38px 14px 44px 14px;
+  box-shadow: none;
+  border: none;
+  border-top: 1px solid rgba(51, 195, 165, 0.18);
+  overflow: hidden;
+}
+
+/* Header Elements */
+.problem-header {
+  text-align: center;
+  margin-bottom: 26px;
+  position: relative;
+  z-index: 2;
+}
+
+.problem-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--navy-primary);
+  background: rgba(51, 195, 165, 0.15);
+  border: 1px solid rgba(51, 195, 165, 0.45);
+  padding: 6px 18px;
+  border-radius: 30px;
+}
+
+.problem-tag .tag-pulse {
+  width: 6px;
+  height: 6px;
+  background: var(--mint-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--mint-accent);
+}
+
+.light-theme .problem-title {
+  font-family: 'Mukta', 'Tiro Devanagari Hindi', sans-serif;
+  font-size: 28px;
+  line-height: 1.35;
+  font-weight: 800;
+  color: var(--navy-primary);
+  margin-top: 14px;
+  letter-spacing: -0.3px;
+}
+
+.light-theme .problem-subtitle {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #2F4E64;
+  margin-top: 8px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Weaving Dotted Support Trail Container */
+.support-trail-container {
+  position: relative;
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Connecting SVG Dotted Trail */
+.trail-connecting-svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Row Item */
+.support-trail-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.support-trail-row.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Delay for Smooth Waterfall Appearance */
+.support-trail-row:nth-child(1) { transition-delay: 0.05s; }
+.support-trail-row:nth-child(2) { transition-delay: 0.12s; }
+.support-trail-row:nth-child(3) { transition-delay: 0.2s; }
+.support-trail-row:nth-child(4) { transition-delay: 0.28s; }
+.support-trail-row:nth-child(5) { transition-delay: 0.35s; }
+.support-trail-row:nth-child(6) { transition-delay: 0.42s; }
+
+/* Circular Image Frame */
+.trail-circle-wrap {
+  flex-shrink: 0;
+  width: 116px;
+  height: 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trail-circle-img-box {
+  position: relative;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  border: 3.5px solid var(--mint-accent);
+  overflow: visible;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(11, 60, 93, 0.14), 0 0 18px rgba(51, 195, 165, 0.3);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.support-trail-row:hover .trail-circle-img-box {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(11, 60, 93, 0.2), 0 0 24px rgba(51, 195, 165, 0.45);
+}
+
+.trail-circle-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(1.14) contrast(1.08) saturate(1.08);
+}
+
+/* Number Badge on Circle */
+.trail-num-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 32px;
+  height: 32px;
+  background: var(--navy-primary);
+  color: #ffffff;
+  border: 2px solid var(--mint-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.5px;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(11, 60, 93, 0.25);
+  z-index: 5;
+}
+
+.row-circle-right .trail-num-badge {
+  left: -4px;
+  right: auto;
+}
+
+/* Rounded Text Card Box */
+.trail-card-box {
+  flex: 1;
+  min-width: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #F5FAF9 100%);
+  border-radius: 20px;
+  padding: 16px 18px;
+  border: 1.5px solid rgba(51, 195, 165, 0.35);
+  box-shadow: 0 8px 24px rgba(11, 60, 93, 0.08), 0 2px 6px rgba(6, 35, 56, 0.03);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.row-circle-left .trail-card-box {
+  border-left: 4.5px solid var(--mint-accent);
+}
+
+.row-circle-right .trail-card-box {
+  border-right: 4.5px solid var(--mint-accent);
+}
+
+.support-trail-row:hover .trail-card-box {
+  transform: translateY(-2px);
+  border-color: var(--mint-accent);
+  box-shadow: 0 12px 28px rgba(11, 60, 93, 0.14), 0 0 15px rgba(51, 195, 165, 0.25);
+}
+
+.trail-card-title {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 17.5px;
+  font-weight: 800;
+  color: var(--navy-primary);
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.card-icon-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--mint-accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 7px var(--mint-accent);
+}
+
+.trail-card-desc {
+  font-family: 'Mukta', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #2F4E64;
+  font-weight: 500;
+}
+
+/* Mobile Responsiveness for Support Trail */
+@media (max-width: 390px) {
+  .light-theme .problem-title {
+    font-size: 24px;
+  }
+
+  .trail-circle-wrap {
+    width: 95px;
+    height: 95px;
+  }
+
+  .trail-circle-img-box {
+    width: 90px;
+    height: 90px;
+  }
+
+  .trail-card-box {
+    padding: 12px 14px;
+  }
+
+  .trail-card-title {
+    font-size: 16px;
+  }
+
+  .trail-card-desc {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   3. PRODUCT INTRODUCTION SECTION (SPLIT STAGE SHOWCASE - SEAMLESS CONNECTED)
+   ========================================================= */
+.product-intro-section {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 0;
+  margin-top: 0;
+  padding: 34px 14px 34px 14px;
+  box-shadow: none;
+  border: none;
+  overflow: hidden;
+}
+
+/* Header */
+.product-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--navy-primary);
+  background: rgba(51, 195, 165, 0.15);
+  border: 1px solid rgba(51, 195, 165, 0.45);
+  padding: 6px 18px;
+  border-radius: 30px;
+}
+
+.product-tag .product-pulse {
+  width: 6px;
+  height: 6px;
+  background: var(--mint-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--mint-accent);
+}
+
+.product-main-title {
+  font-family: 'Mukta', 'Tiro Devanagari Hindi', sans-serif;
+  font-size: 28px;
+  line-height: 1.35;
+  font-weight: 800;
+  color: var(--navy-primary);
+  margin-top: 12px;
+  letter-spacing: -0.3px;
+}
+
+/* =========================================================
+   SPLIT-STAGE PRODUCT HERO (ONE SIDE LIGHT, ONE SIDE DARK)
+   ========================================================= */
+.split-product-hero-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(11, 60, 93, 0.22), 0 4px 14px rgba(6, 35, 56, 0.08);
+  border: 2px solid var(--mint-accent);
+  margin: 18px 0 24px 0;
+  background: #ffffff;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.split-product-hero-wrap:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 50px rgba(11, 60, 93, 0.3), 0 0 30px rgba(51, 195, 165, 0.38);
+  border-color: var(--mint-accent);
+}
+
+.split-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* 1. LEFT HALF: LIGHT BACKGROUND (#FFFFFF to #EDF6F3) */
+.stage-left {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(145deg, #ffffff 0%, #f4faf8 55%, #e2f2ee 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.stage-botanical-disc {
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(51, 195, 165, 0.25) 0%, rgba(51, 195, 165, 0.1) 55%, transparent 75%);
+  border: 2px dashed rgba(51, 195, 165, 0.45);
+  pointer-events: none;
+}
+
+.stage-left-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: var(--navy-primary);
+  opacity: 0.8;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.stage-left::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(51, 195, 165, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* 2. RIGHT HALF: DARK BACKGROUND (DEEP NAVY #051F33 to #0B3C5D) */
+.stage-right {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(160deg, #051F33 0%, var(--navy-primary) 65%, #041726 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 14px;
+}
+
+.stage-right::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(51, 195, 165, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Giant Vertical Watermark Typography on Dark Side (Orange Reference Style) */
+.stage-watermark-text {
+  writing-mode: vertical-rl;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+  font-size: 58px;
+  font-weight: 900;
+  letter-spacing: 7px;
+  color: rgba(255, 255, 255, 0.18);
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(51, 195, 165, 0.2);
+}
+
+/* 3. CENTER REAL BOTTLE (Overlaps the Light & Dark dividing seam) */
+.stage-bottle-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.stage-bottle-img {
+  width: auto;
+  height: 330px;
+  max-width: 240px;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.6));
+  animation: bottleFloat 4.5s ease-in-out infinite alternate;
+}
+
+.stage-bottle-shadow {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 135px;
+  height: 16px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 80%);
+  border-radius: 50%;
+  filter: blur(3px);
+  animation: shadowPulse 4.5s ease-in-out infinite alternate;
+}
+
+/* Center Dividing Seam Glow */
+.split-product-stage::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(51, 195, 165, 0.7) 0%, rgba(51, 195, 165, 0.15) 35%, transparent 50%, rgba(51, 195, 165, 0.15) 65%, rgba(51, 195, 165, 0.7) 100%);
+  transform: translateX(-50%);
+  z-index: 8;
+  pointer-events: none;
+}
+
+/* Botanical Herbal Leaves */
+.floating-leaf {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.leaf-top-left {
+  top: 25px;
+  left: 15px;
+  width: 55px;
+  height: 55px;
+  transform: rotate(-25deg);
+  animation: leafFloat1 4.2s ease-in-out infinite alternate;
+}
+
+.leaf-bottom-left {
+  bottom: 25px;
+  left: 20px;
+  width: 65px;
+  height: 65px;
+  transform: rotate(45deg);
+  animation: leafFloat2 4.8s ease-in-out infinite alternate;
+}
+
+.leaf-behind-cap {
+  top: 40px;
+  left: 45px;
+  width: 52px;
+  height: 52px;
+  transform: rotate(-15deg);
+  z-index: 8;
+  animation: leafFloat1 5s ease-in-out infinite alternate 0.5s;
+}
+
+/* PRODUCT DETAILS CONTENT BOXES (Exact Text Only) */
+.product-details-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.product-info-card {
+  background: #f7fafc;
+  border: 1.5px solid rgba(51, 195, 165, 0.35);
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 16px rgba(11, 60, 93, 0.06);
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-info-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-info-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--mint-accent);
+  box-shadow: 0 10px 22px rgba(11, 60, 93, 0.12);
+}
+
+.product-info-card .info-text {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--navy-primary);
+  font-weight: 500;
+}
+
+.product-info-card .highlight-brand {
+  color: var(--navy-primary);
+  font-weight: 800;
+  background: linear-gradient(180deg, #33C3A5 0%, #0B3C5D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 18.5px;
+}
+
+/* Keyframe animations for Product Section */
+@keyframes bottleFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.4deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes leafFloat1 {
+  0% { transform: rotate(-25deg) translateY(0px); }
+  50% { transform: rotate(-20deg) translateY(-6px); }
+  100% { transform: rotate(-25deg) translateY(0px); }
+}
+
+@keyframes shadowPulse {
+  0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+  50% { transform: translateX(-50%) scale(0.85); opacity: 0.45; }
+  100% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+}
+
+@keyframes leafFloat2 {
+  0% { transform: rotate(45deg) translateY(0px); }
+  50% { transform: rotate(50deg) translateY(-7px); }
+  100% { transform: rotate(45deg) translateY(0px); }
+}
+
+@media (max-width: 380px) {
+  .product-main-title {
+    font-size: 24px;
+  }
+
+  .split-product-stage {
+    height: 330px;
+  }
+
+  .stage-bottle-img {
+    height: 270px;
+  }
+
+  .stage-watermark-text {
+    font-size: 44px;
+    letter-spacing: 4px;
+  }
+
+  .product-info-card .info-text {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   4. SPECIAL FEATURES SECTION (CURVED ARC PROCESS INFOGRAPHIC - SEAMLESS CONNECTED)
+   ========================================================= */
+.features-section {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 0;
+  margin-top: 0;
+  padding: 34px 14px 34px 14px;
+  box-shadow: none;
+  border: none;
+  border-top: 1px solid rgba(51, 195, 165, 0.16);
+  overflow: hidden;
+}
+
+/* Header Tag */
+.features-top-bar {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.features-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--navy-primary);
+  background: rgba(51, 195, 165, 0.15);
+  border: 1px solid rgba(51, 195, 165, 0.45);
+  padding: 6px 18px;
+  border-radius: 30px;
+}
+
+.features-tag .features-pulse {
+  width: 6px;
+  height: 6px;
+  background: var(--mint-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--mint-accent);
+}
+
+/* Main Curved Arc Container */
+.features-arc-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  margin-top: 10px;
+}
+
+/* Left Side Pocket Title */
+.features-left-pocket {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 125px;
+  z-index: 6;
+  text-align: left;
+}
+
+.features-pocket-title {
+  font-family: 'Mukta', 'Tiro Devanagari Hindi', sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: var(--navy-primary);
+  letter-spacing: -0.3px;
+}
+
+.features-pocket-title .brand-title {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--navy-primary);
+  background: linear-gradient(180deg, #0B3C5D 0%, #0E7461 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.features-pocket-title .highlight-title {
+  color: #0E7461;
+  font-weight: 800;
+  font-size: 22px;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.features-mint-accent-bar {
+  width: 42px;
+  height: 4px;
+  background: var(--mint-accent);
+  border-radius: 3px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(51, 195, 165, 0.5);
+}
+
+/* SVG Curved Dashed Line Connecting Nodes */
+.features-arc-svg {
+  position: absolute;
+  left: 105px;
+  top: 0;
+  bottom: 0;
+  width: 85px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Process Feature Nodes List */
+.features-nodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  position: relative;
+  z-index: 3;
+  padding-left: 90px;
+}
+
+/* Feature Node Item (Offset geometry along C-curve arc) */
+.feature-node-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-node-item.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Curving offsets along arc */
+.feature-node-item.node-pos-1 {
+  padding-left: 4px;
+}
+
+.feature-node-item.node-pos-2 {
+  padding-left: 36px;
+}
+
+.feature-node-item.node-pos-3 {
+  padding-left: 36px;
+}
+
+.feature-node-item.node-pos-4 {
+  padding-left: 4px;
+}
+
+/* Node Circle Image Frame (Enlarged as requested) */
+.feature-node-circle {
+  position: relative;
+  width: 86px;
+  height: 86px;
+  min-width: 86px;
+  border-radius: 50%;
+  border: 3px solid var(--mint-accent);
+  box-shadow: 0 10px 25px rgba(11, 60, 93, 0.18), 0 0 18px rgba(51, 195, 165, 0.35);
+  background: #ffffff;
+  padding: 3.5px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.feature-node-item:hover .feature-node-circle {
+  transform: scale(1.08);
+  box-shadow: 0 12px 28px rgba(11, 60, 93, 0.25), 0 0 24px rgba(51, 195, 165, 0.5);
+}
+
+.feature-node-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Node Number Badge (Enlarged) */
+.node-num-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--navy-primary);
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Node Content (Enlarged & Bold Typography) */
+.feature-node-content {
+  flex: 1;
+  min-width: 0;
+  background: #f8fbfb;
+  border: 1.5px solid rgba(51, 195, 165, 0.28);
+  border-radius: 18px;
+  padding: 13px 16px;
+  box-shadow: 0 4px 14px rgba(11, 60, 93, 0.05);
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.feature-node-item:hover .feature-node-content {
+  border-color: var(--mint-accent);
+  background: #ffffff;
+  transform: translateX(4px);
+  box-shadow: 0 8px 20px rgba(11, 60, 93, 0.1);
+}
+
+.feature-node-title {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 18.5px;
+  font-weight: 800;
+  color: var(--navy-primary);
+  line-height: 1.3;
+  margin-bottom: 4px;
+  letter-spacing: -0.2px;
+}
+
+.feature-node-desc {
+  font-family: 'Mukta', sans-serif;
+  font-size: 15px;
+  line-height: 1.48;
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 390px) {
+  .features-left-pocket {
+    width: 105px;
+  }
+
+  .features-pocket-title {
+    font-size: 20px;
+  }
+
+  .features-pocket-title .brand-title {
+    font-size: 18px;
+  }
+
+  .features-nodes-list {
+    padding-left: 78px;
+    gap: 20px;
+  }
+
+  .features-arc-svg {
+    left: 92px;
+    width: 70px;
+  }
+
+  .feature-node-circle {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+  }
+
+  .feature-node-item.node-pos-2,
+  .feature-node-item.node-pos-3 {
+    padding-left: 24px;
+  }
+
+  .feature-node-content {
+    padding: 10px 12px;
+  }
+
+  .feature-node-title {
+    font-size: 16.5px;
+  }
+
+  .feature-node-desc {
+    font-size: 13.5px;
+  }
+}
+
+/* =========================================================
+   5. KEY INGREDIENTS SECTION (CHEVRON RIBBON INFOGRAPHIC - SEAMLESS CONNECTED)
+   ========================================================= */
+.ingredients-section {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 0;
+  margin-top: 0;
+  padding: 34px 14px 44px 14px;
+  box-shadow: none;
+  border: none;
+  border-top: 1px solid rgba(51, 195, 165, 0.16);
+  overflow: hidden;
+}
+
+/* Section Header */
+.ingredients-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.ingredients-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--navy-primary);
+  background: rgba(51, 195, 165, 0.15);
+  border: 1px solid rgba(51, 195, 165, 0.45);
+  padding: 6px 18px;
+  border-radius: 30px;
+}
+
+.ingredients-tag .ingredients-pulse {
+  width: 6px;
+  height: 6px;
+  background: var(--mint-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--mint-accent);
+}
+
+.ingredients-main-title {
+  font-family: 'Mukta', 'Tiro Devanagari Hindi', sans-serif;
+  font-size: 26px;
+  line-height: 1.35;
+  font-weight: 800;
+  color: var(--navy-primary);
+  margin-top: 12px;
+  letter-spacing: -0.3px;
+}
+
+/* List of Ribbon Cards */
+.ingredients-ribbon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 8px;
+}
+
+/* Single Ribbon Card */
+.ingredient-ribbon-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ingredient-ribbon-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Left Thumbnail Area with Diagonal Paper Fold Effect (Enlarged) */
+.ribbon-left-thumb-wrap {
+  position: relative;
+  z-index: 4;
+  flex-shrink: 0;
+  width: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ribbon-thumb-circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 3.5px solid var(--mint-accent);
+  box-shadow: 0 10px 26px rgba(11, 60, 93, 0.28), 0 0 16px rgba(51, 195, 165, 0.45);
+  overflow: hidden;
+  background: #ffffff;
+  position: relative;
+  z-index: 5;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.ingredient-ribbon-card:hover .ribbon-thumb-circle {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(11, 60, 93, 0.35), 0 0 22px rgba(51, 195, 165, 0.6);
+}
+
+.ribbon-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 3D Diagonal Fold Shadow (Reference match) */
+.ribbon-diagonal-shadow {
+  position: absolute;
+  right: -14px;
+  top: -8px;
+  bottom: -8px;
+  width: 32px;
+  background: linear-gradient(135deg, rgba(6, 29, 46, 0.38) 0%, transparent 70%);
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Chevron Ribbon Body (Enlarged Height) */
+.ribbon-body {
+  position: relative;
+  flex: 1;
+  min-height: 96px;
+  margin-left: -28px;
+  padding: 14px 48px 14px 38px;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(28px 0%, calc(100% - 24px) 0%, 100% 50%, calc(100% - 24px) 100%, 0% 100%);
+  filter: drop-shadow(0 8px 18px rgba(11, 60, 93, 0.2));
+  transition: transform 0.35s ease, filter 0.35s ease;
+  z-index: 2;
+}
+
+.ingredient-ribbon-card:hover .ribbon-body {
+  transform: translateX(4px);
+  filter: drop-shadow(0 12px 26px rgba(11, 60, 93, 0.3));
+}
+
+/* Text Content Inside Ribbon (Bigger Typography) */
+.ribbon-text-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ribbon-title {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 4px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.2px;
+}
+
+.ribbon-desc {
+  font-family: 'Mukta', sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Diamond Number Badge at Chevron Tip (Enlarged) */
+.ribbon-diamond-badge {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border: 2px solid var(--mint-accent);
+  border-radius: 7px;
+  box-shadow: 0 4px 12px rgba(11, 60, 93, 0.25), 0 0 10px rgba(51, 195, 165, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+  transition: transform 0.35s ease;
+}
+
+.ingredient-ribbon-card:hover .ribbon-diamond-badge {
+  transform: translateY(-50%) rotate(45deg) scale(1.08);
+}
+
+.diamond-num {
+  transform: rotate(-45deg);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14.5px;
+  font-weight: 800;
+  display: block;
+}
+
+/* Unified Identical Color for All 4 Ingredient Ribbons (No Different Colors) */
+.ingredient-ribbon-card .ribbon-body,
+.theme-mint .ribbon-body,
+.theme-teal .ribbon-body,
+.theme-navy-teal .ribbon-body,
+.theme-navy .ribbon-body {
+  background: linear-gradient(135deg, #07253B 0%, var(--navy-primary) 65%, #0C4E6D 100%);
+}
+
+.ingredient-ribbon-card .diamond-num,
+.theme-mint .diamond-num,
+.theme-teal .diamond-num,
+.theme-navy-teal .diamond-num,
+.theme-navy .diamond-num {
+  color: var(--navy-primary);
+}
+
+/* Mobile Responsiveness for Ingredients Section */
+@media (max-width: 390px) {
+  .ingredients-main-title {
+    font-size: 22px;
+  }
+
+  .ribbon-left-thumb-wrap {
+    width: 86px;
+  }
+
+  .ribbon-thumb-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .ribbon-body {
+    min-height: 86px;
+    padding: 12px 42px 12px 30px;
+    clip-path: polygon(24px 0%, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, 0% 100%);
+  }
+
+  .ribbon-title {
+    font-size: 18px;
+  }
+
+  .ribbon-desc {
+    font-size: 13.5px;
+  }
+
+  .ribbon-diamond-badge {
+    width: 35px;
+    height: 35px;
+    right: 4px;
+  }
+
+  .diamond-num {
+    font-size: 13px;
+  }
+}
