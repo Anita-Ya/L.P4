@@ -81,7 +81,7 @@ body {
   background: linear-gradient(180deg, #F2F8FB 0%, #FFFFFF 40%, #F5FAFA 100%);
   border-radius: 0;
   margin-top: 0;
-  padding: 38px 14px 44px 14px;
+  padding: 24px 14px 16px 14px;
   box-shadow: none;
   border: none;
   border-top: 1px solid rgba(51, 195, 165, 0.18);
@@ -91,7 +91,7 @@ body {
 /* Header Elements */
 .problem-header {
   text-align: center;
-  margin-bottom: 26px;
+  margin-bottom: 16px;
   position: relative;
   z-index: 2;
 }
@@ -219,7 +219,9 @@ body {
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  filter: brightness(1.14) contrast(1.08) saturate(1.08);
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Number Badge on Circle */
@@ -341,7 +343,7 @@ body {
   background: #ffffff;
   border-radius: 0;
   margin-top: 0;
-  padding: 34px 14px 34px 14px;
+  padding: 16px 14px 18px 14px;
   box-shadow: none;
   border: none;
   overflow: hidden;
@@ -350,7 +352,7 @@ body {
 /* Header */
 .product-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .product-tag {
@@ -382,7 +384,7 @@ body {
   line-height: 1.35;
   font-weight: 800;
   color: var(--navy-primary);
-  margin-top: 12px;
+  margin-top: 0;
   letter-spacing: -0.3px;
 }
 
@@ -696,7 +698,7 @@ body {
   background: #ffffff;
   border-radius: 0;
   margin-top: 0;
-  padding: 34px 14px 34px 14px;
+  padding: 16px 14px 18px 14px;
   box-shadow: none;
   border: none;
   border-top: 1px solid rgba(51, 195, 165, 0.16);
@@ -706,7 +708,7 @@ body {
 /* Header Tag */
 .features-top-bar {
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .features-tag {
@@ -983,7 +985,7 @@ body {
   background: #ffffff;
   border-radius: 0;
   margin-top: 0;
-  padding: 34px 14px 44px 14px;
+  padding: 16px 14px 20px 14px;
   box-shadow: none;
   border: none;
   border-top: 1px solid rgba(51, 195, 165, 0.16);
@@ -993,7 +995,7 @@ body {
 /* Section Header */
 .ingredients-header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .ingredients-tag {
@@ -1242,14 +1244,14 @@ body {
 .quality-trust-section {
   position: relative;
   background: linear-gradient(180deg, #FFFFFF 0%, #F4F8FA 40%, #FFFFFF 100%);
-  padding: 44px 18px 50px 18px;
+  padding: 18px 14px 20px 14px;
   overflow: hidden;
   border-top: 1px solid rgba(51, 195, 165, 0.15);
 }
 
 .quality-header {
   text-align: center;
-  margin-bottom: 34px;
+  margin-bottom: 16px;
 }
 
 .quality-tag {
@@ -1582,14 +1584,14 @@ body {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  padding: 42px 16px 54px 16px;
+  padding: 20px 14px 22px 14px;
   background: linear-gradient(180deg, #FFFFFF 0%, #F5F9FA 45%, #EDF4F7 100%);
   box-sizing: border-box;
 }
 
 .reviews-header {
   text-align: center;
-  margin-bottom: 26px;
+  margin-bottom: 16px;
 }
 
 .reviews-pill-tag {
@@ -1723,7 +1725,7 @@ body {
 }
 
 .review-stars-box {
-  color: #FFB800;
+  color: #33C3A5;
   font-size: 15px;
   letter-spacing: 2px;
   line-height: 1;
@@ -1800,7 +1802,7 @@ body {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  padding: 42px 16px 52px 16px;
+  padding: 20px 14px 22px 14px;
   background: linear-gradient(180deg, #071927 0%, #0D2338 50%, #061623 100%);
   box-sizing: border-box;
 }
@@ -1862,11 +1864,11 @@ body {
 /* Foreground 3D Product Bottle (Matching reference image) */
 .doctor-bottle-overlay {
   position: absolute;
-  right: 6px;
-  bottom: -6px;
-  width: 122px;
+  right: 10px;
+  bottom: 2px;
+  width: 116px;
   z-index: 3;
-  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.65));
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55));
 }
 
 .doctor-overlay-bottle-img {
@@ -1964,8 +1966,13 @@ body {
   }
   
   .doctor-bottle-overlay {
-    width: 105px;
-  }
+  position: absolute;
+  right: 10px;
+  bottom: 2px;
+  width: 116px;
+  z-index: 3;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55));
+}
 
   .doctor-specialty-title {
     font-size: 20px;
@@ -1990,7 +1997,7 @@ body {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  padding: 30px 16px 56px 16px;
+  padding: 18px 14px 22px 14px;
   background: #F2F8FB;
   box-sizing: border-box;
 }
@@ -2012,13 +2019,26 @@ body {
 }
 
 /* Top Encouraging Subtitle (#F2F8FB) */
+.offer-top-heading {
+  font-family: 'Poppins', 'Mukta', sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 22px 0;
+  line-height: 1.35;
+  text-align: center;
+  letter-spacing: -0.2px;
+  padding: 0 8px;
+}
+
 .offer-top-subtitle {
-  font-family: 'Mukta', sans-serif;
-  font-size: 14.5px;
-  color: #F2F8FB;
-  font-weight: 500;
-  margin: 0 0 20px 0;
-  line-height: 1.45;
+  font-family: 'Poppins', 'Mukta', sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 22px 0;
+  line-height: 1.35;
+  text-align: center;
 }
 
 /* Product Image Spotlight Circle */
@@ -2261,13 +2281,13 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: #F0BF58;
+  background: #33C3A5;
   color: #07253B;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 3px 10px rgba(240, 191, 88, 0.35);
+  box-shadow: 0 3px 10px rgba(51, 195, 165, 0.35);
 }
 
 .feature-item-text {
@@ -2359,14 +2379,14 @@ body {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  padding: 42px 16px 54px 16px;
+  padding: 20px 14px 24px 14px;
   background: #FFFFFF;
   box-sizing: border-box;
 }
 
 .faq-header {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
 .faq-pill-tag {
@@ -2723,7 +2743,7 @@ body {
 }
 
 .strip-tag {
-  background: #E58325;
+  background: #33C3A5;
   color: #FFFFFF;
   font-family: 'Poppins', sans-serif;
   font-size: 10px;
@@ -2776,7 +2796,7 @@ body {
 }
 
 .required-star {
-  color: #FF5A5F;
+  color: #33C3A5;
   font-weight: 800;
   margin-left: 2px;
 }
@@ -3027,11 +3047,11 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #FFF6E8;
-  border: 1px solid #FFE4B5;
+  background: rgba(51, 195, 165, 0.15);
+  border: 1px solid rgba(51, 195, 165, 0.4);
   border-radius: 50px;
   padding: 4px 12px;
-  color: #C27803;
+  color: #0B3C5D;
   font-family: 'Poppins', 'Mukta', sans-serif;
   font-size: 11.5px;
   font-weight: 800;
@@ -3039,7 +3059,7 @@ body {
 }
 
 .disclaimer-badge svg {
-  color: #C27803;
+  color: #0B3C5D;
 }
 
 .disclaimer-content {
@@ -3197,4 +3217,838 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 10.5px;
   color: #7B8F9E;
+}
+
+
+/* ==========================================================================
+   SECTION 11: EXACT REFERENCE ORDER FORM (Requested by User)
+   ========================================================================== */
+.order-form-container-box {
+  position: relative;
+  width: 100%;
+  background: #0B3C5D;
+  border: 2px solid #33C3A5;
+  border-radius: 24px;
+  padding: 38px 16px 20px 16px;
+  box-shadow: 0 16px 40px rgba(11, 60, 93, 0.28);
+  box-sizing: border-box;
+}
+
+.ref-order-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 32px 18px 22px 18px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+}
+
+.ref-rec-badge {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #E0A638;
+  color: #07253B;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 6px 22px;
+  border-radius: 50px;
+  box-shadow: 0 4px 14px rgba(224, 166, 56, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.badge-star {
+  font-size: 15px;
+  color: #07253B;
+}
+
+.ref-order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ref-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.ref-label {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #07253B;
+  margin: 0;
+}
+
+.ref-input {
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  background: #FAF8F3;
+  border: 1.5px solid #8C2D2D;
+  border-radius: 12px;
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #07253B;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ref-input::placeholder {
+  color: #7B8A95;
+  font-weight: 400;
+}
+
+.ref-input:focus {
+  border-color: #0B3C5D;
+  box-shadow: 0 0 0 3px rgba(11, 60, 93, 0.15);
+}
+
+.ref-hint-msg {
+  font-family: 'Mukta', sans-serif;
+  font-size: 12px;
+  color: #8C2D2D;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.ref-submit-btn {
+  width: 100%;
+  height: 54px;
+  background: #E0A638;
+  color: #07253B;
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(224, 166, 56, 0.35);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.ref-submit-btn:hover {
+  background: #cf9528;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(224, 166, 56, 0.45);
+}
+
+.ref-submit-btn:active {
+  transform: translateY(1px);
+}
+
+.ref-trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 12px;
+  margin-top: 18px;
+  font-size: 12px;
+  color: #F2F8FB;
+  flex-wrap: wrap;
+}
+
+.ref-trust-row .trust-item {
+  color: #F2F8FB;
+}
+
+
+/* ==========================================================================
+   SECTION 11: AYURVANI-STYLE ORDER FORM (Exact Screenshot Match)
+   ========================================================================== */
+.ayur-order-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 2px solid rgba(11, 60, 93, 0.12);
+  border-radius: 24px;
+  padding: 30px 20px 24px 20px;
+  box-shadow: 0 14px 38px rgba(11, 60, 93, 0.08);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* 1. Header Title: "Order Your Product" */
+.ayur-order-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #0B3C5D;
+  margin: 0 0 18px 0;
+  line-height: 1.25;
+}
+
+/* 2. Product Thumbnail Box */
+.ayur-product-thumb-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.ayur-thumb-box {
+  width: 96px;
+  height: 96px;
+  background: #F2F8FB;
+  border: 1.5px solid rgba(51, 195, 165, 0.35);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(11, 60, 93, 0.08);
+  overflow: hidden;
+}
+
+.ayur-thumb-img {
+  max-width: 82%;
+  max-height: 82%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+.ayur-product-brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #0B3C5D;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* 3. Leaf Divider: ─── 🍃 ─── */
+.ayur-leaf-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto 22px auto;
+}
+
+.leaf-line {
+  flex: 1;
+  height: 1px;
+  background: #D9E4EC;
+}
+
+.leaf-icon-wrap {
+  color: #33C3A5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 4. Form Fields */
+.ayur-actual-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ayur-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.ayur-label {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0B3C5D;
+  margin: 0;
+}
+
+.ayur-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1.5px solid #D0DFE8;
+  border-radius: 14px;
+  height: 52px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.ayur-input-box:focus-within {
+  border-color: #33C3A5;
+  box-shadow: 0 0 0 3px rgba(51, 195, 165, 0.2);
+  background: #FFFFFF;
+}
+
+.ayur-input-icon {
+  color: #0B3C5D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.ayur-input-box:focus-within .ayur-input-icon {
+  color: #33C3A5;
+}
+
+.ayur-input-box.phone-box {
+  background: #FFFFFF;
+}
+
+.ayur-input {
+  flex: 1;
+  height: 100%;
+  background: transparent;
+  border: none;
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #07253B;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.ayur-input::placeholder {
+  color: #8A9CA8;
+  font-weight: 400;
+}
+
+.ayur-hint-error {
+  display: none;
+  font-family: 'Mukta', sans-serif;
+  font-size: 12.5px;
+  color: #D93829;
+  font-weight: 600;
+  margin-top: 4px;
+  padding-left: 2px;
+}
+
+.ayur-hint-error.is-visible {
+  display: block;
+}
+
+/* Dynamic error state: only applied when validation fails */
+.ayur-input-box.has-error {
+  border-color: #D93829 !important;
+  background: #FFF8F8 !important;
+  box-shadow: 0 0 0 2px rgba(217, 56, 41, 0.15) !important;
+}
+
+.ayur-input-box.has-error .ayur-input-icon {
+  color: #D93829 !important;
+}
+
+
+/* 5. Submit Button: "Place My Order" */
+.ayur-submit-btn {
+  width: 100%;
+  height: 56px;
+  background: #0B3C5D;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', 'Mukta', sans-serif;
+  font-size: 18.5px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(11, 60, 93, 0.35);
+  margin-top: 6px;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.ayur-submit-btn:hover {
+  background: #07253B;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(11, 60, 93, 0.45);
+}
+
+.btn-cart-icon {
+  display: flex;
+  align-items: center;
+}
+
+.btn-arrow-icon {
+  font-size: 18px;
+  margin-left: 2px;
+}
+
+/* 6. Support Callout */
+.ayur-support-callout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.callout-check-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #33C3A5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.callout-text {
+  font-family: 'Mukta', sans-serif;
+  font-size: 13px;
+  color: #4A6072;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+/* 7. Trust Row */
+.ayur-trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 12px;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #E5EEF3;
+  font-size: 11.5px;
+  color: #6C8294;
+  flex-wrap: wrap;
+}
+
+.ayur-trust-row .trust-item svg {
+  color: #33C3A5;
+}
+
+
+/* ==========================================================================
+   THANK YOU / ORDER CONFIRMATION MODAL & PAGE (Exact Reference Match)
+   ========================================================================== */
+.thankyou-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(7, 37, 59, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.thankyou-modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 410px;
+  background: #FFFFFF;
+  border-radius: 28px;
+  padding: 34px 22px 26px 22px;
+  box-shadow: 0 24px 60px rgba(7, 37, 59, 0.38);
+  box-sizing: border-box;
+  text-align: center;
+  animation: cardSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cardSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid #E1EDF4;
+  background: #FFFFFF;
+  color: #6C8294;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.modal-close-btn:hover {
+  background: #F2F8FB;
+  color: #07253B;
+  border-color: #0B3C5D;
+}
+
+/* Success Checkmark Circle */
+.thankyou-check-outer {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: rgba(51, 195, 165, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.thankyou-check-inner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(51, 195, 165, 0.22);
+  border: 1.5px solid rgba(51, 195, 165, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pill Tag */
+.thankyou-pill-tag {
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 50px;
+  background: rgba(51, 195, 165, 0.16);
+  border: 1px solid rgba(51, 195, 165, 0.45);
+  color: #0B3C5D;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+/* Greeting Title */
+.thankyou-greet-title {
+  font-family: 'Poppins', 'Mukta', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #07253B;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+
+.thankyou-user-name {
+  color: #33C3A5;
+}
+
+.thankyou-greet-sub {
+  font-family: 'Mukta', sans-serif;
+  font-size: 14.5px;
+  color: #4A6072;
+  margin: 0 0 18px 0;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Summary Box */
+.thankyou-details-box {
+  background: #F8FBFC;
+  border: 1.5px solid #E1EDF4;
+  border-radius: 18px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', 'Mukta', sans-serif;
+  font-size: 14px;
+}
+
+.detail-label {
+  color: #6C8294;
+  font-weight: 600;
+}
+
+.detail-value {
+  color: #07253B;
+  font-weight: 800;
+}
+
+.detail-value.order-id-val {
+  font-family: 'Poppins', monospace;
+  letter-spacing: 0.5px;
+}
+
+.detail-value.delivery-val {
+  color: #33C3A5;
+  font-weight: 800;
+}
+
+.detail-divider {
+  border-top: 1px dashed #D5E4EC;
+  margin: 10px 0;
+}
+
+/* Callout Note */
+.thankyou-callout-note {
+  font-family: 'Mukta', sans-serif;
+  font-size: 13px;
+  color: #6C8294;
+  margin: 0 0 18px 0;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+/* Action Button: "धन्यवाद, ठीक है" */
+.thankyou-confirm-btn {
+  width: 100%;
+  height: 52px;
+  background: #0B3C5D;
+  color: #FFFFFF;
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(11, 60, 93, 0.35);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.thankyou-confirm-btn:hover {
+  background: #07253B;
+  transform: translateY(-2px);
+}
+
+
+/* ===================================================
+   LIVE ORDER SOCIAL PROOF POPUP / TOAST (Navy + Mint)
+   =================================================== */
+.live-order-toast {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translate(-50%, 140%);
+  width: calc(100% - 24px);
+  max-width: 410px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(51, 195, 165, 0.45);
+  border-radius: 18px;
+  padding: 10px 34px 10px 12px;
+  box-shadow: 0 10px 32px rgba(11, 60, 93, 0.2), 0 2px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.live-order-toast.is-active {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.live-order-toast.is-active:hover {
+  transform: translate(-50%, -2px);
+  box-shadow: 0 14px 40px rgba(11, 60, 93, 0.25), 0 3px 10px rgba(0, 0, 0, 0.08);
+  border-color: #33C3A5;
+}
+
+.toast-close-btn {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  background: rgba(11, 60, 93, 0.06);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7B8F9E;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  z-index: 2;
+}
+
+.toast-close-btn:hover {
+  background: rgba(192, 57, 43, 0.15);
+  color: #C0392B;
+  transform: scale(1.1);
+}
+
+.toast-thumb-wrap {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #F2F8FB;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D0DFE8;
+}
+
+.toast-product-img {
+  width: 32px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.toast-live-pulse {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  background: #33C3A5;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(51, 195, 165, 0.7);
+  animation: toastPulse 1.8s infinite;
+}
+
+@keyframes toastPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(51, 195, 165, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(51, 195, 165, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(51, 195, 165, 0);
+  }
+}
+
+.toast-content-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.toast-buyer-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  line-height: 1.2;
+}
+
+.toast-buyer-name {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #0B3C5D;
+}
+
+.toast-buyer-city {
+  font-family: 'Mukta', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #5A738E;
+}
+
+.toast-time-badge {
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #0B3C5D;
+  background: rgba(51, 195, 165, 0.18);
+  padding: 1px 6px;
+  border-radius: 6px;
+  letter-spacing: 0.2px;
+}
+
+.toast-product-action {
+  font-family: 'Mukta', sans-serif;
+  font-size: 13px;
+  color: #07253B;
+  line-height: 1.25;
+}
+
+.toast-brand-name {
+  color: #0B3C5D;
+  font-weight: 800;
+}
+
+.toast-status-row {
+  display: flex;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.toast-verified-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #10846A;
+}
+
+@media (max-width: 480px) {
+  .live-order-toast {
+    bottom: 14px;
+    padding: 9px 30px 9px 10px;
+    border-radius: 16px;
+  }
+  .toast-buyer-name {
+    font-size: 13.5px;
+  }
+  .toast-buyer-city {
+    font-size: 12px;
+  }
+  .toast-product-action {
+    font-size: 12.5px;
+  }
 }
