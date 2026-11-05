@@ -2379,7 +2379,7 @@ body {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  padding: 20px 14px 24px 14px;
+  padding: 14px 14px 24px 14px;
   background: #FFFFFF;
   box-sizing: border-box;
 }
@@ -2574,7 +2574,7 @@ body {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  padding: 10px 16px 36px 16px;
+  padding: 10px 16px 14px 16px;
   background: #FFFFFF;
   box-sizing: border-box;
 }
@@ -3629,17 +3629,33 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px 12px;
-  margin-top: 20px;
+  gap: 8px 10px;
+  margin-top: 18px;
   padding-top: 14px;
   border-top: 1px solid #E5EEF3;
-  font-size: 11.5px;
-  color: #6C8294;
   flex-wrap: wrap;
 }
 
-.ayur-trust-row .trust-item svg {
+.ayur-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Mukta', 'Poppins', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #0B3C5D;
+  white-space: nowrap;
+}
+
+.ayur-trust-item svg {
   color: #33C3A5;
+  flex-shrink: 0;
+}
+
+.ayur-trust-sep {
+  color: #B2CAD8;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 

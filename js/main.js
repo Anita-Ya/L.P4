@@ -185,7 +185,7 @@ function dismissLiveToast(event) {
 function scrollToOrder(event) {
   if (event) event.preventDefault();
 
-  const orderSection = document.getElementById('order') || document.querySelector('.ayur-order-card');
+  const orderSection = document.getElementById('orderForm') || document.getElementById('order') || document.querySelector('.ayur-order-card');
   if (orderSection) {
     orderSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
     const nameInput = document.getElementById('userName');
